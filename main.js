@@ -5,18 +5,25 @@ const err1 = document.getElementById("err1");
 const err2 = document.getElementById("err2");
 const success = document.getElementById("success");
 
-form.addEventListener("input", check);
+firstName.addEventListener("input", check1);
+lastName.addEventListener("input",check2);
 //add entry
+
 form.addEventListener("submit", addEntry);
 
-function check(event) {
+function check1(event) {
   if (firstName.value) {
     err1.innerText = "";
   }
-  if (lastName.value) {
-    err2.innerText = "";
-  }
 }
+
+function check2(event){
+    if (lastName.value) {
+        err2.innerText = "";
+      }
+}
+
+
 
 function addEntry(event) {
   event.preventDefault();
